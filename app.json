@@ -1,0 +1,12 @@
+{
+  "name": "spotpub",
+  "displayName": "spotpub",
+  "expo": {
+    "name": "spotpub",
+    "slug": "spotpub",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
