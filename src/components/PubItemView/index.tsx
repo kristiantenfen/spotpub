@@ -1,5 +1,4 @@
 import React from 'react';
-import { useNavigation } from '@react-navigation/core';
 import Icon from 'react-native-vector-icons/Feather';
 
 
@@ -19,13 +18,17 @@ interface IPub {
     telephone: string,
     website: string,
 }
+
+interface IGoback{
+  goBack: ()=>void
+}
   
-const PubItemView: React.FC<{pub: IPub}> = ({pub}) => {
-    const navigation = useNavigation();
+const PubItemView: React.FC<{pub: IPub, goBack?: IGoback}> = ({pub, goBack}) => {
+   
     return (
         <Container>
             <Header source={{ uri: pub.image }}>
-      <GoBack onPress={() => navigation.goBack()}>
+      <GoBack onPress={goBack}>
             <Icon name="chevron-left" size={24} color="#FFF" />
           </GoBack>
              </Header>

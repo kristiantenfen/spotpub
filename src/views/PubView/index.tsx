@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useRoute } from '@react-navigation/core';
+import { useNavigation, useRoute } from '@react-navigation/core';
 
 
 import Restorante from '../../resources/Restorant';
@@ -27,6 +27,7 @@ interface IPub {
 }
 
 const PubView: React.FC = () => {
+  const navigation = useNavigation();
   
   const route = useRoute();
   const [pub, setPub] = useState<IPub>();
@@ -50,7 +51,7 @@ const PubView: React.FC = () => {
   return (
     <Container>
         {loading ? (<Loading size="large" />) : (
-          <PubItemView pub={pub} />
+        <PubItemView pub={pub} goBack={() => navigation.goBack()}/>
         )}
     </Container>
   );

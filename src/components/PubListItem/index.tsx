@@ -3,9 +3,9 @@ import React from 'react'
 import { Container, Item, ItemText } from './styles';
 
 interface ItemProps {
+    id: string
     name: string,
     image: string,
-    id: string
 }
 
 const PubListItem: React.FC<{ pub: ItemProps }> = ({ pub }) => {

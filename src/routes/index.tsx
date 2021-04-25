@@ -15,7 +15,7 @@ const Routes: React.FC = () => (
     >
         <AppRouter.Screen name="Home" component={Home} />
         <AppRouter.Screen name="PubSearch" component={PubSearch} />
-        <AppRouter.Screen name="PubView" component={PubView} id={''}/>
+        <AppRouter.Screen name="PubView" component={PubView} />
     </AppRouter.Navigator>
 )
 
